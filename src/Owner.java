@@ -1,4 +1,5 @@
 public class Owner {
+
     private String name;
 
     public Owner(String name) {
@@ -7,5 +8,9 @@ public class Owner {
 
     public void login() {
         System.out.println(name + " logged in.");
+    }
+
+    public String getName() {
+        return name;
     }
 }

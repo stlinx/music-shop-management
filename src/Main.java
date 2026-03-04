@@ -1,14 +1,16 @@
 public class Main {
+
     public static void main(String[] args) {
 
         Owner owner = new Owner("Admin");
-        MusicShop shop = new MusicShop("My Music Shop");
-
         owner.login();
 
+        MusicShop shop = new MusicShop("My Music Shop");
+
         InstrumentType guitarType = new InstrumentType("Guitar");
+
         Instrument guitar = new Instrument(
-                "G001",
+                "I001",
                 "Acoustic Guitar",
                 "FG800",
                 guitarType,
@@ -17,10 +19,8 @@ public class Main {
 
         shop.addInstrument(guitar);
 
-        SaleTransaction sale = new SaleTransaction(guitar, 7500);
-        shop.addSaleTransaction(sale);
-
-        sale.processSale();
+        Transaction sale = new SaleTransaction(guitar, 7500);
+        shop.addTransaction(sale);
 
         Report report = new Report(shop);
         report.generateSalesReport();

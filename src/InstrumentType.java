@@ -1,4 +1,5 @@
 public class InstrumentType {
+
     private String typeName;
 
     public InstrumentType(String typeName) {
